@@ -2,6 +2,7 @@ package com.ftn.isa.domain;
 
 import javax.persistence.*;
 
+import com.ftn.isa.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -44,12 +45,15 @@ public abstract class User extends BaseDomain {
     @Column(name = "jmbg", nullable = false, unique = true)
     private String jmbg; //jedinstveni broj osiguranika
 
+
     @Column(name= "status",nullable = false)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_authority",
-            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+           joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "authority_id", referencedColumnName = "id"))
     private List<Authority> authorities;
 

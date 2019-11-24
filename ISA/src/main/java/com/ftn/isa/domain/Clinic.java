@@ -34,6 +34,6 @@ public class Clinic extends User{
     )
     private Set<Patient> patients = new HashSet<Patient>();
 
-    @OneToMany(mappedBy = "clinic",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    Set<Doctor> doctors = new HashSet<Doctor>();
+    //@OneToMany(mappedBy = "clinic",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    //Set<Doctor> doctors = new HashSet<Doctor>();
 }

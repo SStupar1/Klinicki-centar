@@ -16,6 +16,10 @@ public class Doctor extends User{
     @Column(name="work_time_end")
     private String end;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Clinic clinic;
+
+    //@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    //private Clinic clinic;
+
+    //dodati appointment
+
 }

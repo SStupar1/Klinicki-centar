@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DoctorUpdateRequest {
-    @NotNull
+
     @Email
     private String email;
 
@@ -27,6 +27,5 @@ public class DoctorUpdateRequest {
 
     private String phone;
 
-    @NotNull
     private String jmbg;
 }
