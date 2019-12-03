@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -17,9 +19,10 @@ public class Doctor extends User{
     private String end;
 
 
-    //@ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    //private Clinic clinic;
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    private Clinic clinic;
 
-    //dodati appointment
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    Set<Appointment> appointments = new HashSet<>();
 
 }

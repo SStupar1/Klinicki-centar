@@ -29,7 +29,7 @@ public class DoctorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DoctorResponse> getMedical(@PathVariable Long id) {
+    public ResponseEntity<DoctorResponse> getDoctorById(@PathVariable Long id) {
         DoctorResponse response = _doctorService.getDoctorById(id);
         if (response == null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
