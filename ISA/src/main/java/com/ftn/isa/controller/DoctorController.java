@@ -32,7 +32,7 @@ public class DoctorController {
     public ResponseEntity<DoctorResponse> getDoctorById(@PathVariable Long id) {
         DoctorResponse response = _doctorService.getDoctorById(id);
         if (response == null) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

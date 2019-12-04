@@ -47,6 +47,7 @@ public class DoctorService implements IDoctorService {
         Doctor savedDoctor = _doctorRepository.save(doctor);
 
         //kako da proverim ako vec postoji isti
+        //hoce li to za mene uraditi unique???
 
         return mapToResponse(savedDoctor);
     }
