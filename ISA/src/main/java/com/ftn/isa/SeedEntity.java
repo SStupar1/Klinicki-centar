@@ -9,8 +9,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SeedEntity  implements ApplicationRunner{
-
+public class SeedEntity {
+/*
     @Autowired
     private IDoctorRepository doctorRepository;
 
@@ -40,4 +40,6 @@ public class SeedEntity  implements ApplicationRunner{
             // do nothing, entity already exist
         }
     }
+
+ */
 }
