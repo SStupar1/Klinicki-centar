@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/doctors")
+@RequestMapping("/api/doctors")
 public class DoctorController {
 
     private final IDoctorService _doctorService;

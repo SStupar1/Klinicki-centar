@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-@RequestMapping("/appointmentTypes")
+@RequestMapping("/api/appointmentTypes")
 public class AppointmentTypeController {
 
     private final IAppointmentTypeService _appointmentTypeService;
