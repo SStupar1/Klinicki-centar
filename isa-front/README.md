@@ -1,4 +1,4 @@
-# isa-front
+# isa
 
 ## Project setup
 ```
